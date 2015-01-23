@@ -26,7 +26,7 @@ int main(int argc,char *argv[])
 {
 	if(argc == 2)length = atoi(argv[1]);
 	while(length > 0){
-		for(int i = 0;i <= length*3;i++)printf("___");
+		for(int i = 0;i <= length+1;i++)printf("____ ");
 		printf("\nL = %2d : result \n",length);
 		setArrays();
 		solve();
@@ -52,7 +52,10 @@ void setArrays()
 		currentIndex += count;
 	}
 	printf("MODIFIED INPUT IS \n[ ");
-	for(int i = 0;i <= newsize;i++)printf("{%2d,%2d}\n ",ms[i].length,ms[i].price);
+	for(int i = 0;i <= newsize;i++){
+		printf("{%2d,%2d} ",ms[i].length,ms[i].price);
+		if(i % length == 0)printf("\n");
+	}
 	printf("]\n\n");
 	
 	c = (int **)malloc(sizeof(int *) * (newsize + 1));
@@ -74,7 +77,7 @@ void solve()
 {
 	for(int i = 0;i <= newsize;i++)c[i][0] = 0;
 	for(int l = 0;l <= length;l++)c[0][l] = 0;
-	for(int x=0;x<=2*length;x++)printf("***\t");printf("\n");
+	for(int x=0;x<=length+1;x++)printf("**** ");printf("\n");
 	
 	for(int i = 1;i <= newsize;i++){
 		for(int l = 1;l <= length;l++){
@@ -104,22 +107,16 @@ void print_result()
 	for(int i = -1;i <= newsize;i++){
 		for(int l = -1;l <= length;l++){
 			if(i < 0 && l < 0){
-				printf("\t\t\t");
+				printf("     ");
 				continue;
 			}else if(l < 0 ){
-				printf("[%2d]\t",i);
+				printf("[%2d]  ",i);
 				continue;
 			}else if(i < 0){
-				printf("[%2d]\t",l);
+				printf("[%2d] ",l);
 				continue;
 			}
-			printf("%2d\t\t",c[i][l]);
-		}
-		if(i == 0){
-			printf("\n");
-			for(int x = 0;x <= length + 1;x++){
-				printf("-----\t");
-			}
+			printf("%2d   ",c[i][l]);
 		}
 		printf("\n");
 	}
@@ -130,7 +127,7 @@ void print_result()
 	backtrack(newsize,length,0);
 	printf("Cutting List = [ ");
 	for(int i = 0;i <= N;i++){
-		if(result[i]) printf("%2d, ",result[i]);
+		if(result[i]) printf("%2d,",result[i]);
 	}
 	printf("]\n\n");
 	for(int i = 0;i <= N;i++){
