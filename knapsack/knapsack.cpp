@@ -31,6 +31,7 @@ int main(int argc,char *argv[])
 		printf("\nL = %2d : result \n",length);
 		setArrays();
 		solve();
+		backtrack(newsize,length,0);
 		print_result();
 		freeArrays();
 		length--;
@@ -125,7 +126,6 @@ void print_result()
 
 	printf("MAXIMUM PRICE IS [ %2d ]\n\n",c[newsize][length]);
 
-	backtrack(newsize,length,0);
 	printf("Cutting List = [ ");
 	for(int i = 0;i <= N;i++){
 		if(result[i]) printf("%2d,",result[i]);
