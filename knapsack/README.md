@@ -52,3 +52,4 @@
 ##アルゴリズム
 
 あとは動的計画法を用いて，実装するだけなので，`knapsack.cpp`を参照してください．
+`0<L<=20`のときの出力結果は[result_20.dat][https://github.com/romancek/algorithm/blob/master/knapsack/result_20.dat]にあります．
