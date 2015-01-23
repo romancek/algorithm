@@ -54,7 +54,7 @@
 あとは動的計画法を用いて実装するだけです．
 [knapsack.cpp][link_knapsack]を参照してください．
 
-`knapsack [number]`で`0<L<=number`を出力します．
+`>knapsack [number]`で入力例の`0<L<=number`の結果を出力します．
 
 ##出力
 
