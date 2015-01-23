@@ -10,4 +10,4 @@
 ##License
 [the MIT License][link_license]
 
-[link_license]:https://github.com/romancek/algorithm/LISENCE
+[link_license]:https://github.com/romancek/algorithm/LISENCE "LICENSE"
