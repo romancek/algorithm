@@ -52,10 +52,11 @@
 ##アルゴリズム
 
 あとは動的計画法を用いて実装するだけです．
-`knapsack.cpp`を参照してください．
+[knapsack.cpp][link_result]を参照してください．
 
 ##出力
 
 `0<L<=20`のときの出力結果→[result_20.dat][link_result]．
 
+[link_knapsack]:https://github.com/romancek/algorithm/blob/master/knapsack/knapsack.cpp "実装のリンク"
 [link_result]:https://github.com/romancek/algorithm/blob/master/knapsack/result_20.dat "出力例のリンク"
