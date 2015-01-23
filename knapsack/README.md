@@ -52,7 +52,7 @@
 ##アルゴリズム
 
 あとは動的計画法を用いて実装するだけです．
-[knapsack.cpp][link_result]を参照してください．
+[knapsack.cpp][link_knapsack]を参照してください．
 
 ##出力
 
