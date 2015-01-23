@@ -4,6 +4,6 @@
 ただし，使用は自己責任でお願いします．
 
 ## Environment
-1. Compile `gcc 4.8.3' on 'Windows 7 x64`
+1. Compile `gcc 4.8.3` on `Windows 7 x64`
 2. Command `gcc *.cpp -std=c++11`
 
