@@ -55,6 +55,6 @@
 
 ##出力
 
-`0<L<=20`のときの出力結果を[result_20.dat][link_result]におきます．
+`0<L<=20`のときの出力結果→[result_20.dat][link_result]．
 
 [link_result]:https://github.com/romancek/algorithm/blob/master/knapsack/result_20.dat "出力例のリンク"
