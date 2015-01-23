@@ -3,6 +3,7 @@
 
 #define N 10	//切り分けパターンの数
 #define L 10	//もともとの金属棒の長さ
+
 void setArrays(void);
 void freeArrays(void);
 void solve(void);
@@ -16,8 +17,8 @@ struct InputSet{
 
 struct InputSet s[N+1] =
 	 {{0,0},{1,1},{2,5},{3,8},{4,9},{5,10},{6,17},{7,17},{8,20},{9,24},{10,30}};
-struct InputSet *ms = NULL;		//個数制限無しのナップサック問題用に，修正した入力をここに保存
-int **c = NULL;					//c[i][l]は長さlの金属棒についてi番目の切り分けパターンまで考慮したときの価格の最大値
+struct InputSet *ms = NULL;	//個数制限無しのナップサック問題用に，修正した入力をここに保存
+int **c = NULL;	//c[i][l]は長さlの金属棒についてi番目の切り分けパターンまで考慮したときの価格の最大値
 int result[N+1] = {0};
 int length = L;
 int newsize;
