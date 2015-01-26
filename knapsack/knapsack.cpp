@@ -4,7 +4,7 @@
 #define N 10	//切り分けパターンの数
 #define L 10	//もともとの金属棒の長さ
 
-void setArrays(int);
+void setArrays(void);
 void freeArrays(void);
 void solve(void);
 void backtrack(int,int,int);
@@ -26,9 +26,7 @@ int main(int argc,char *argv[])
 {
 	if(argc == 2)length = atoi(argv[1]);
 	while(length > 0){
-		for(int i = 0;i <= length+1;i++)printf("____ ");
-		printf("\nL = %2d : result \n",length);
-		setArrays(1);
+		setArrays();
 		solve();
 		backtrack(N,length,0);
 		print_result();
@@ -38,7 +36,7 @@ int main(int argc,char *argv[])
 	return 0;
 }
 
-void setArrays(int change)
+void setArrays()
 {
 	c = (int **)malloc(sizeof(int *) * (N + 1));
 	for(int i = 0;i <= N;i++){
@@ -68,7 +66,6 @@ void solve()
 				c[i+1][l] = max(c[i][l],c[i+1][l-inputs[i].length] + inputs[i].price);
 			}
 		}
-		
 	}
 }
 
@@ -91,6 +88,9 @@ int max(int a, int b)
 
 void print_result()
 {
+	for(int i = 0;i <= length+1;i++)printf("____ ");
+	printf("\nL = %2d : result \n",length);
+
 	for(int i = -1;i <= N;i++){
 		for(int l = -1;l <= length;l++){
 			if(i < 0 && l < 0){
