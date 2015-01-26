@@ -7,3 +7,7 @@
 1. Compile `gcc 4.8.3` on `Windows 7 x64`
 2. Command `gcc *.cpp -std=c++11`
 
+##License
+[the MIT License][link_license]
+
+[link_license]:https://github.com/romancek/algorithm/LISENCE "LICENSE"
